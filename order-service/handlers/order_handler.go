@@ -5,6 +5,16 @@
 // is invalid, it responds with a 400 Bad Request error.
 // On successful creation, it returns a 201 Created status
 // along with the created order object.
+package handlers
+
+import (
+	"net/http"
+	"order-service/database"
+	"order-service/models"
+	"order-service/services"
+
+	"github.com/gin-gonic/gin"
+)
 
 func CreateOrder(c *gin.Context) {
 	var order models.Order
